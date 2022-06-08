@@ -18,4 +18,7 @@ defmodule RumblWeb.VideoControllerTest do
       end
     )
   end
+
+  setup %{conn: conn, login_as: username} do
+  end
 end
