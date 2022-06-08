@@ -20,5 +20,9 @@ defmodule RumblWeb.VideoControllerTest do
   end
 
   setup %{conn: conn, login_as: username} do
+    user = user_fixture(username: username)
+    conn = assign(conn, :current_user, user)
+
+    {:ok, conn: conn, user: user}
   end
 end
